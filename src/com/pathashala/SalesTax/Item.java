@@ -31,12 +31,19 @@ public class Item {
         if(Arrays.asList(inputArray).contains("imported")){
             tax += 0.05;
         }
-        if (Arrays.asList(inputArray).contains("book")||Arrays.asList(inputArray).contains("chocolates")||Arrays.asList(inputArray).contains("pills")) {
+        if (Arrays.asList(inputArray).contains("book")||Arrays.asList(inputArray).contains("chocolates")||
+                Arrays.asList(inputArray).contains("pills")||Arrays.asList(inputArray).contains("chocolate")) {
             tax += 0.0;
         } else {
             tax += 0.10;
         }
         sellingPrice = itemPrice * (1 + tax);
+    }
+    public double getItemPrice() {
+        return itemPrice;
+    }
+    public double getSellingPrice() {
+        return sellingPrice;
     }
 
 
