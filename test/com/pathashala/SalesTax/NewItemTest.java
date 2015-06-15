@@ -11,9 +11,18 @@ public class NewItemTest {
         NewItem newItem = new NewItem("1 book at 12.90 ");
         Items nonImportedItem = newItem.createItem();
 
-
         double actualTax = nonImportedItem.getTax();
 
         assertThat(actualTax,is(0.0));
+    }
+
+    @Test
+    public void shouldReturnImportedItemWhenItemIsImported() {
+        NewItem newItem = new NewItem("1 imported book at 12.90 ");
+        Items importedItem = newItem.createItem();
+
+        double actualTax = importedItem.getTax();
+
+        assertThat(actualTax,is(0.05));
     }
 }
