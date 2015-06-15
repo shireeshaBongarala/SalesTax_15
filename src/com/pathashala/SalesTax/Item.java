@@ -28,10 +28,10 @@ public class Item {
        return itemQuantity + "" + itemName + ": "+ formattedItemPrice;
     }
     public void computeTotalCost( ) {
-        if(Arrays.asList(input).contains("imported")){
+        if(Arrays.asList(inputArray).contains("imported")){
             tax += 0.05;
         }
-        if (Arrays.asList(inputArray).contains("book")) {
+        if (Arrays.asList(inputArray).contains("book")||Arrays.asList(inputArray).contains("chocolates")) {
             tax += 0.0;
         } else {
             tax += 0.10;

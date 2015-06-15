@@ -34,4 +34,15 @@ public class SalesTaxTest {
 
         assertThat(actualBill,is("1 music CD: 16.49"));
     }
+
+    @Test
+    public void toGetTheTotalCostOfAChocolateBar() {
+        Item item = new Item("1 imported box of chocolates at 10.00");
+        item.computeTotalCost();
+
+        String actualBill = item.displayOutput();
+
+        assertThat(actualBill,is("1 imported box of chocolates: 10.50"));
+
+    }
 }
