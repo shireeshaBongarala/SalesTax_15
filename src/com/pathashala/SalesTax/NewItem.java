@@ -11,9 +11,9 @@ public class NewItem {
     public Items createItem(){
         String inputArray[] = input.split(" ");
         if(Arrays.asList(inputArray).contains("imported")) {
-            return new ImportedItem();
+            return new ImportedItem(input);
         }
-        return new NonImportedItem();
+        return new NonImportedItem(input);
     }
 
 }

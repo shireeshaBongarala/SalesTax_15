@@ -8,7 +8,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 public class ImportedItemTest {
     @Test
     public void shouldHaveZeroTaxOnNonImportedItems() {
-        Items item = new NonImportedItem();
+        Items item = new NonImportedItem("1 book at 13.90");
 
         double actualTax = item.getTax();
 
