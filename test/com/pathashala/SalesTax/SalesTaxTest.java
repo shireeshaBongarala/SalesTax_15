@@ -55,4 +55,13 @@ public class SalesTaxTest {
 
         assertThat(actualBill,is("1 imported bottle of perfume: 32.19"));
     }
+    @Test
+    public void toGetTheTotalCostOfHeadAchePills() {
+        Item item = new Item("1 packet of headache pills at 9.75");
+        item.computeTotalCost();
+
+        String actualBill = item.displayOutput();
+
+        assertThat(actualBill,is("1 packet of headache pills: 9.75"));
+    }
 }
