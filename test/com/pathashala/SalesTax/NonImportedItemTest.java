@@ -13,6 +13,6 @@ public class NonImportedItemTest {
         double actualTax = item.getTax();
 
         assertThat(actualTax, is(0.0));
-        
+
     }
 }

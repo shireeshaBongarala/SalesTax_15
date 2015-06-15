@@ -13,6 +13,5 @@ public class ImportedItemTest {
         double actualTax = item.getTax();
 
         assertThat(actualTax, is(0.0));
-
     }
 }
