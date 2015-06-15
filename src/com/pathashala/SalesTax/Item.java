@@ -7,6 +7,7 @@ public class Item {
     }
 
     public String displayOutput() {
-        return "1 book: 12.49";
+        String inputArray [] = input.split(" ");
+        return inputArray[0] + " " + inputArray[1] + ": "+inputArray[3] ;
     }
 }

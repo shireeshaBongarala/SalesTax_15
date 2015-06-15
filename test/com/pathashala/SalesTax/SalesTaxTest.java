@@ -15,4 +15,12 @@ public class SalesTaxTest {
 
         assertThat(actualBill,is("1 book: 12.49"));
     }
+    @Test
+    public void toGetTheDifferentTotalCostOfBooks() {
+        Item item = new Item("1 book at 12.00");
+
+        String actualBill = item.displayOutput();
+
+        assertThat(actualBill,is("1 book: 12.00"));
+    }
 }
